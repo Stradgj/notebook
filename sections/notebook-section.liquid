@@ -1,0 +1,278 @@
+
+{% style %}
+  .first-anim-block{
+    position:relative;
+    margin: 100px 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .second-anim-block{
+    margin: 230px 0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    overflow:hidden;
+  }
+  .fixed_text{
+    position:absolute;
+    bottom:30%;
+    left:40px;
+    line-height:1;
+  }
+    .first-anim-block .main_content{
+      max-width: 800px;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+    }
+  .typing-text{
+    text-align:center;
+    font-size:20px;
+    max-width:220px;
+    margin: 0 0 40px 0;
+    line-height:1.2;
+  }
+  .typing-text .notyped,.notyped_fixed{
+        opacity:30%;
+  }
+  .first-anim-block h2{
+    margin-top:0;
+    margin-bottom:100px;
+    font-size:150px;
+    text-align:center;
+  }
+  .book-container{
+    width:35vw;
+  }
+  .book-container img{
+    width:100%;
+  }
+  .book-images-container{
+    display: flex;
+    position absolute;
+    gap:10px;
+    align-items: center;
+    transform:translateX(28vw);
+  }
+  .book-slider{
+    position:fixed;
+    top:20%;
+    overflow:hidden;
+    z-index:-1;
+    
+  }
+  .hide{
+    opacity:0;
+  }
+  .heading_container h2{
+    font-size:64px;
+    max-width:750px;
+        line-height: 0.8;
+  }
+   .fixed_typing-text{
+    position:sticky;
+    top:50%;
+    left:40px;
+    font-size:20px;
+    max-width:250px;
+  }
+  .sticky-images{
+    position:relative;
+  }
+  .video_button{
+    display: flex;
+    padding:20px;
+    background-color:#AC0027;
+    border-radius:100px;
+    position: absolute;
+    top:50%;
+    right:40px;
+    cursor:pointer;
+    border:none;
+  }
+{% endstyle %}
+<div class="sticky-images">
+<div class="first-anim-block">
+  <div class="fixed_text"><span class="cursive-text" style="font-size:32px">( </span>{{ section.settings.first_fixed_text }}<span class="cursive-text" style="font-size:32px"> )</span></div>
+  <div class="main_content">
+    <p class="typing-text"><span class="typed"></span><span class="notyped">{{ section.settings.block_1_text }}</span></p>
+    {{ section.settings.heading_block_1 }}
+    <a href="#" class="red-btn"><span>{{ section.settings.btn_1_text }}</span></a>
+  </div>
+  <button class="video_button">{% render "icon-triangle" %}</button>
+</div>
+<div class="second-anim-block-sticky-container">
+<div class="second-anim-block">
+  <div class="heading_container">
+    {{ section.settings.heading_block_2 }}
+  </div>
+  <div class="buttons"></div>
+</div>
+  <div class="fixed_typing-text"><span class="typed_fixed"></span><span class="notyped_fixed">{{ section.settings.second_fixed_text }}</span></div>
+</div>
+<div class="third-anim-block">
+  <div class="grid-content">
+    <h2 class="grid-header-1"></h2>
+    <h2 class="grid-header-2"></h2>
+    <h2 class="grid-header-3"></h2>
+    <h2 class="grid-text"></h2>
+    <h2 class="grid-buttons"></h2>
+  </div>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const typedElement = document.querySelector('.typed');
+        const notypedElement = document.querySelector('.notyped');
+        const text = notypedElement.textContent;
+        let index = 0;
+        let s = 10
+
+        let type = function() {
+            if (index < text.length) {
+                typedElement.textContent += text[index];
+                notypedElement.textContent = text.substring(index + 1);
+                index++;
+                s++;
+                setTimeout(type, s); 
+            }
+        }
+
+      type();
+
+  function onElementInViewText(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const typedElement = document.querySelector('.typed_fixed');
+        const notypedElement = document.querySelector('.notyped_fixed');
+        const text = notypedElement.textContent;
+        let index = 0;
+        let s = 10
+
+        let typeFixed = function() {
+            if (index < text.length) {
+                typedElement.textContent += text[index];
+                notypedElement.textContent = text.substring(index + 1);
+                index++;
+                s+=0.2;
+                setTimeout(typeFixed, s); 
+            }
+        }
+
+        typeFixed();
+        document.querySelector('.book-1').classList.toggle("hide");
+        observer.disconnect();
+      }
+    });
+  }
+  let observerText = new IntersectionObserver(onElementInViewText, {
+    root: null, 
+    rootMargin: '0px',
+    threshold: 0.1 // 10% видимости элемента
+  });
+
+  // Целевой элемент
+  let targetElementText = document.querySelector('.heading_container');
+
+  observerText.observe(targetElementText);
+    });
+
+</script>
+{% schema %}
+  {
+    "name": "Notebook",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Block 1"
+      },
+      {
+        "type":"text",
+        "id":"first_fixed_text",
+        "label": "Left text"
+      },
+      {
+        "type":"text",
+        "id":"block_1_text",
+        "label": "text"
+      },
+      {
+        "type":"html",
+        "id":"heading_block_1",
+        "label": "heading",
+        "info": "Write your heading in h2 tag. To make text red and cursive write it in span tag"
+      },
+        {
+        "type":"text",
+        "id":"btn_1_text",
+        "label": "Button"
+      },
+      {
+        "type": "header",
+        "content": "Block 2"
+      },
+        {
+        "type":"html",
+        "id":"heading_block_2",
+        "label": "heading",
+        "info": "Write your heading in h2 tag. To make text red and cursive write it in span tag"
+      },
+      {
+        "type":"text",
+        "id":"second_fixed_text",
+        "label": "Left text"
+      },
+      {
+        "type": "header",
+        "content": "Animation images"
+      },
+      {
+        "type": "image_picker",
+        "id": "first_pic",
+        "label": "Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "second_pic",
+        "label": "Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "third_pic",
+        "label": "Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "fourth_pic",
+        "label": "Image 4"
+      },
+      {
+        "type": "header",
+        "content": "Block 3"
+      },
+      {
+        "type": "text",
+        "id": "header_text_1",
+        "label": "Header text 1"
+      },
+      {
+        "type": "text",
+        "id": "header_text_2",
+        "label": "Header text 2"
+      },
+      {
+        "type": "text",
+        "id": "header_text_3",
+        "label": "Header text 3"
+      },
+    ],
+    "presets": [
+      {
+        "name": "Notebook"
+      }
+    ]
+  }
+{% endschema %}
