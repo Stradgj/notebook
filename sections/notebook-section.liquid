@@ -8,6 +8,7 @@
     justify-content:center;
   }
   .second-anim-block{
+    position:relative;
     margin: 230px 0;
     display: flex;
     align-items:center;
@@ -57,13 +58,6 @@
     align-items: center;
     transform:translateX(28vw);
   }
-  .book-slider{
-    position:fixed;
-    top:20%;
-    overflow:hidden;
-    z-index:-1;
-    
-  }
   .hide{
     opacity:0;
   }
@@ -73,14 +67,11 @@
         line-height: 0.8;
   }
    .fixed_typing-text{
-    position:sticky;
+    position:absolute;
     top:50%;
     left:40px;
     font-size:20px;
     max-width:250px;
-  }
-  .sticky-images{
-    position:relative;
   }
   .video_button{
     display: flex;
@@ -93,6 +84,57 @@
     cursor:pointer;
     border:none;
   }
+  .buttons{
+    display:flex;
+    gap:10px;
+  }
+  .buttons .white-btn{
+    padding: 23px 95px;
+  }
+  
+  .buttons .red-btn{
+    padding: 23px 137px;
+  }
+  .grid-content{
+    display:grid;
+    grid-template-columns: 2fr 0.5fr 2fr;
+  }
+  .grid-header-1,.grid-header-2,.grid-header-3{
+    font-size:150px;
+    text-transform: uppercase;
+    margin:0;
+  }
+  .grid-header-1{
+    line-height:1;
+  }
+  .grid-header-2{
+    grid-row: 2;
+    grid-column: 2;
+    transform:translateX(-50%)
+  }
+  .grid-header-3{
+    grid-row: 2;
+    grid-column: 3;
+    text-align: end;
+  }
+  .grid-text{
+    grid-row: 3;
+    grid-column: 3;
+    font-size:20px;
+    margin:0;
+    max-width:590px;
+    justify-self: end;
+  }
+  .third-anim-block{
+    margin:100px 30px;
+  }
+  .grid-button{
+    grid-row: 3;
+    grid-column: 1;
+    padding: 23px 77px !important;
+    width:370px !important;
+    height:72px !important;
+  }
 {% endstyle %}
 <div class="sticky-images">
 <div class="first-anim-block">
@@ -104,22 +146,37 @@
   </div>
   <button class="video_button">{% render "icon-triangle" %}</button>
 </div>
-<div class="second-anim-block-sticky-container">
 <div class="second-anim-block">
   <div class="heading_container">
     {{ section.settings.heading_block_2 }}
   </div>
-  <div class="buttons"></div>
-</div>
+  <div class='book-images-container'>
+    <div class="book-container">
+    <img loading="lazy" src="{{ section.settings.first_pic  | image_url}}">
+    </div>
+    <div class="book-container">
+    <img loading="lazy" src="{{ section.settings.second_pic | image_url }}">
+    </div>
+    <div class="book-container">
+    <img loading="lazy" src="{{ section.settings.third_pic | image_url }}">
+    </div>
+    <div class="book-container">
+    <img loading="lazy" src="{{ section.settings.fourth_pic | image_url }}">
+    </div>
+  </div>
+  <div class="buttons">
+    <a href="#" class="white-btn"><span>{{ section.settings.btn_2_text }}</span></a>
+    <a href="#" class="red-btn"><span>{{ section.settings.btn_3_text}}</span></a>
+  </div>
   <div class="fixed_typing-text"><span class="typed_fixed"></span><span class="notyped_fixed">{{ section.settings.second_fixed_text }}</span></div>
 </div>
 <div class="third-anim-block">
   <div class="grid-content">
-    <h2 class="grid-header-1"></h2>
-    <h2 class="grid-header-2"></h2>
-    <h2 class="grid-header-3"></h2>
-    <h2 class="grid-text"></h2>
-    <h2 class="grid-buttons"></h2>
+    <h2 class="grid-header-1">{{ section.settings.header_text_1 }}</h2>
+    <h2 class="grid-header-2">{{ section.settings.header_text_2 }}</h2>
+    <h2 class="grid-header-3">{{ section.settings.header_text_3 }}</h2>
+    <p class="grid-text">{{ section.settings.section_3_text }}</p>
+    <a href="#" class="grid-button red-btn"><span>{{ section.settings.btn_4_text }}</span></a>
   </div>
 </div>
 </div>
@@ -250,6 +307,16 @@
         "label": "Image 4"
       },
       {
+        "type": "text",
+        "id": "btn_2_text",
+        "label": "First button text"
+      },
+      {
+        "type": "text",
+        "id": "btn_3_text",
+        "label": "Second button text"
+      },
+      {
         "type": "header",
         "content": "Block 3"
       },
@@ -267,6 +334,16 @@
         "type": "text",
         "id": "header_text_3",
         "label": "Header text 3"
+      },
+      {
+        "type": "text",
+        "id": "section_3_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "btn_4_text",
+        "label": "Button"
       },
     ],
     "presets": [
