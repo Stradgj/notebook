@@ -1,0 +1,105 @@
+<div class="about-us-hero">
+    <div class="about-us-grid">
+    <div class="about-us-text-block">
+        <h3 class="about-us-header">{{ section.settings.header_1 }}</h3>
+        <p class="about-text">{{ section.settings.text_1 }}</p>
+    </div>
+    <div class="about-us-text-block">
+        <h3 class="about-us-header">{{ section.settings.header_2 }}</h3>
+        <p class="about-text">{{ section.settings.text_2 }}</p>
+    </div>
+    
+    <div class="about-us-text-block">
+        <h3 class="about-us-header">{{ section.settings.header_3 }}</h3>
+        <p class="about-text">{{ section.settings.text_3 }}</p>
+    </div>
+    <div class="about-us-text-block">
+        <h3 class="about-us-header">{{ section.settings.header_4 }}</h3>
+        <p class="about-text">{{ section.settings.text_4 }}</p>
+    </div>
+    </div>
+    <div class="about-us-button"></div>
+</div>
+
+{% schema %}
+{
+    "name": "About main",   
+    "settings": [
+        {
+        "type": "header",
+        "content": "Block 1"
+        },
+        {
+        "type": "text",
+        "id":"header_1",
+        "label": "header"
+        },
+        {
+        "type": "text",
+        "id":"text_1",
+        "label": "text"
+        },
+        {
+        "type": "header",
+        "content": "Block 2"
+        },
+        {
+        "type": "text",
+        "id":"header_2",
+        "label": "header"
+        },
+        {
+        "type": "text",
+        "id":"text_2",
+        "label": "text"
+        },
+        {
+        "type": "header",
+        "content": "Block 3"
+        },
+        {
+        "type": "text",
+        "id":"header_3",
+        "label": "header"
+        },
+        {
+        "type": "text",
+        "id":"text_3",
+        "label": "text"
+        },
+        {
+        "type": "header",
+        "content": "Block 4"
+        },
+        {
+        "type": "text",
+        "id":"header_4",
+        "label": "header"
+        },
+        {
+        "type": "text",
+        "id":"text_4",
+        "label": "text"
+        },
+        {
+        "type": "header",
+        "content": "Button"
+        },       
+        {
+        "type": "text",
+        "id":"button-text",
+        "label": "Button text"
+        },
+        {
+        "type": "url",
+        "id":"button-link",
+        "label": "Button link"
+        },
+    ],
+    "presets": [
+        {
+            "name": "Instagram grid",
+        }
+    ]
+}
+{% endschema %}

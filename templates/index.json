@@ -1,5 +1,4 @@
 /*
-<<<<<<< HEAD
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
  *
@@ -8,16 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-=======
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
 {
   "sections": {
     "notebook_section_h7f6ae": {
@@ -25,7 +14,6 @@
       "settings": {
         "first_fixed_text": "Navigate life<br> with confidence<br> and clarity",
         "block_1_text": "A notebook for those  who strive to excellence",
-<<<<<<< HEAD
         "heading_block_1": "<h2>THE<br>\nPATH <span style=\"margin-left:30px\" class=\"cursive-text red\">to </span>SELF</h2>",
         "btn_1_text": "Start your journey",
         "heading_block_2": "<h2> \n            \nELEVATE YOUR LIFE<span class=\"cursive-text red\"> with \"Personal \"</span>\n</h2>",
@@ -34,16 +22,6 @@
         "second_pic": "shopify://shop_images/1_2_1.png",
         "third_pic": "shopify://shop_images/3_2.png",
         "fourth_pic": "shopify://shop_images/6_1.png",
-=======
-        "heading_block_1": "<h2>THE<br>\nPATH <span style=\"margin-left:30px\" class=\"cursive-text red\">to <\/span>SELF<\/h2>",
-        "btn_1_text": "Start your journey",
-        "heading_block_2": "<h2> \n            \nELEVATE YOUR LIFE<span class=\"cursive-text red\"> with \"Personal \"<\/span>\n<\/h2>",
-        "second_fixed_text": "Unlock the door to inner peace and unparalleled clarity with \"Personal\" – the ultimate self-programming book.",
-        "first_pic": "shopify:\/\/shop_images\/5_2.png",
-        "second_pic": "shopify:\/\/shop_images\/1_2_1.png",
-        "third_pic": "shopify:\/\/shop_images\/3_2.png",
-        "fourth_pic": "shopify:\/\/shop_images\/6_1.png",
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
         "btn_2_text": "Product details",
         "btn_3_text": "buy now",
         "header_text_1": "Don't wait",
@@ -59,73 +37,41 @@
         "column_KDTWDx": {
           "type": "column",
           "settings": {
-<<<<<<< HEAD
             "image": "shopify://shop_images/Group.png",
             "title": "Get in touch with us",
             "text": "<p>Reach out for any inquiries, support, or feedback. We are here to help!</p>",
             "link_label": "Contacts",
             "link": "shopify://pages/contact"
-=======
-            "image": "shopify:\/\/shop_images\/Group.png",
-            "title": "Get in touch with us",
-            "text": "<p>Reach out for any inquiries, support, or feedback. We are here to help!<\/p>",
-            "link_label": "",
-            "link": ""
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
           }
         },
         "column_Tmqb7f": {
           "type": "column",
           "settings": {
-<<<<<<< HEAD
             "image": "shopify://shop_images/Group1.png",
             "title": "Grow with \" Personal \"",
             "text": "<p>Plant your business card, watch the flowers bloom, and experience your own journey of personal growth.</p>",
             "link_label": "growth",
             "link": "shopify://pages/contact"
-=======
-            "image": "shopify:\/\/shop_images\/Group1.png",
-            "title": "Grow with \" Personal \"",
-            "text": "<p>Plant your business card, watch the flowers bloom, and experience your own journey of personal growth.<\/p>",
-            "link_label": "",
-            "link": ""
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
           }
         },
         "column_NAgkme": {
           "type": "column",
           "settings": {
-<<<<<<< HEAD
             "image": "shopify://shop_images/Group2.png",
             "title": "Find all the information you need",
             "text": "<p>Explore our policies, FAQs, and helpful resources. We're always happy to assist you.</p>",
             "link_label": "Services",
             "link": "shopify://pages/contact"
-=======
-            "image": "shopify:\/\/shop_images\/Group2.png",
-            "title": "Find all the information you need",
-            "text": "<p>Explore our policies, FAQs, and helpful resources. We're always happy to assist you.<\/p>",
-            "link_label": "",
-            "link": ""
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
           }
         },
         "column_MjFqbL": {
           "type": "column",
           "settings": {
-<<<<<<< HEAD
             "image": "shopify://shop_images/Group3.png",
             "title": "Explore our product",
             "text": "<p>Discover your perfect \"Personal\" self-programming book and choose the one that resonates with you.</p>",
             "link_label": "Product",
             "link": "shopify://pages/contact"
-=======
-            "image": "shopify:\/\/shop_images\/Group3.png",
-            "title": "Explore our product",
-            "text": "<p>Discover your perfect \"Personal\" self-programming book and choose the one that resonates with you.<\/p>",
-            "link_label": "",
-            "link": ""
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
           }
         }
       },
@@ -138,25 +84,16 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-<<<<<<< HEAD
         "image_width": "half",
-=======
-        "image_width": "full",
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "primary",
-<<<<<<< HEAD
         "button_label": "",
-=======
-        "button_label": "Button label",
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-<<<<<<< HEAD
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -165,22 +102,23 @@
       "type": "instagram-grid",
       "settings": {
         "header": "<h2>\n<span class=\"cursive-text red\">our</span><br>INSTAGRAM</h2>",
+        "image_1": "shopify://shop_images/IMG_5917.jpg",
+        "image_2": "shopify://shop_images/IMG_5922.jpg",
+        "image_3": "shopify://shop_images/IMG_5918.jpg",
+        "image_4": "shopify://shop_images/IMG_5919.jpg",
+        "image_5": "shopify://shop_images/IMG_5920.jpg",
+        "image_6": "shopify://shop_images/IMG_5923.jpg",
+        "image_7": "shopify://shop_images/IMG_5917.jpg",
+        "image_8": "shopify://shop_images/IMG_5922.jpg",
+        "image_9": "shopify://shop_images/IMG_5919.jpg",
         "button-text": "cross over",
         "inst": "https://www.instagram.com/ruchko_m/"
-=======
-        "padding_top": 36,
-        "padding_bottom": 36
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
       }
     }
   },
   "order": [
     "notebook_section_h7f6ae",
-<<<<<<< HEAD
     "multicolumn_TwQwF4",
     "instagram_grid_Hbiehb"
-=======
-    "multicolumn_TwQwF4"
->>>>>>> 6f186fed671ad70104a04c4399ef2e2a62d2212c
   ]
 }

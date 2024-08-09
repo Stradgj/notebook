@@ -9,12 +9,19 @@
   {% for block in section.blocks %}
     {% if block.type == "column" %}
       <div class="footer_column">
-      <h4 class="cursive-text red footer-colunm_header">{{ block.settings.header }}</h4>
+      <h4 class="cursive-text red footer-colunm_header">{{ block.settings.menu.title }}</h4>
       <ul class="footer-links">
       {% for link in block.settings.menu.links %}
-        <li></li>
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
       </ul>
+      </div>
+      {% endif %}
+    {% if block.type == "logo" %}
+      <div class="footer_column">
+        <div class="footer-logo">
+          <img height="80px" width="160px" src="{{ block.settings.logo | image_url }}">
+        </div>
       </div>
       {% endif %}
     {% endfor %}
@@ -30,14 +37,13 @@
       "limit":3,
       "settings": [
         {
-          "type":"text",
-          "id":"header",
-          "label": "Header"  
+          "type": "header",
+          "content": "Select menu"
         },
         {
           "type":"link_list",
           "id":"menu",
-          "label": "Links"  
+          "label": "Links" 
         },
       ]
     },

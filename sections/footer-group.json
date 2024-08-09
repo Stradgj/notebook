@@ -13,6 +13,38 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "logo_KzRzaH": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Logo.svg"
+          }
+        },
+        "column_zikw9y": {
+          "type": "column",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "column_EcdUyR": {
+          "type": "column",
+          "settings": {
+            "menu": "legal-privacy"
+          }
+        },
+        "column_HFFFF4": {
+          "type": "column",
+          "settings": {
+            "menu": "follow-us"
+          }
+        }
+      },
+      "block_order": [
+        "logo_KzRzaH",
+        "column_zikw9y",
+        "column_EcdUyR",
+        "column_HFFFF4"
+      ],
       "settings": {}
     }
   },

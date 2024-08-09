@@ -14,7 +14,6 @@
         margin:60px 100px 50px;
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
         gap:5px;
         line-height: 0 !important;
     }
@@ -22,12 +21,19 @@
         display:flex;
         flex-direction:column;
         align-items:center;
+        margin-bottom:150px;
     }
     .instagram-post{
         max-width:500px;
+        overflow:hidden;
+        cursor:pointer
     }
     .instagram-post img{
-        width:100px;
+        width:100%;
+        transition: all 0.3s
+    }
+    .instagram-post img:hover{
+        transform: scale(1.1)
     }
     .instagram-section .red-btn{
         padding: 23px 121px;

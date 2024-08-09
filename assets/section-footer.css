@@ -1,5 +1,38 @@
 footer {
   border-top: 2px solid #ac0027;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+}
+.footer-links li {
+  list-style: none;
+}
+.footer-links li a:link,
+.footer-links li a:visited {
+  font-family: "Forum" !important;
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer-links li a:hover,
+.footer-links li a:active {
+  text-decoration: underline;
+}
+
+.footer-colunm_header {
+  font-size: 40px;
+  margin: 50px 0;
+}
+.footer_column {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  margin-top: 50px;
 }
